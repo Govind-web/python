@@ -18,9 +18,13 @@ class Car:
     
     def display_info(self):
         print(f"Car: {self.brand} {self.model}")
+        
+    def speed(self):
+        print("max speed i have 200km/h")
 
 # Create an object of the class
 my_car = Car("BMW", "M4")
 
 # Call the method
 my_car.display_info()
+my_car.speed()

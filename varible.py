@@ -1,19 +1,32 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 11 20:11:24 2025
+# Parent class
+class Father:
+    def __init__(self, name, occupation):
+        self.name = name
+        self.occupation = occupation
+    
+    def show_details(self):
+        print(f"Father's Name: {self.name}")
+        print(f"Father's Occupation: {self.occupation}")
 
-@author: Deepak
-"""
+# Child class (inherits from Father)
+class Banku(Father):
+    def __init__(self, name, occupation, hobby):
+        # Call parent constructor using super()
+        super().__init__(name, occupation)
+        self.hobby = hobby
+    
+    def show_details(self):
+        # Extend parent method
+        super().show_details()
+        print(f"Banku's Hobby: {self.hobby}")
 
-x,y,z=1,2.5,'Gopi'
-print(x,y,z)
+# Create objects
+father_obj = Father("Ramesh", "Engineer")
+banku_obj = Banku("Banku", "Student", "Football")
 
-a,b=5,10
-a,b=b,a
-print(a , b)
+# Display details
+print("Father Object:")
+father_obj.show_details()
 
-#counting character
-
-word="python"
-length=len(word)
-print("length of the word",length)
+print("\nBanku Object:")
+banku_obj.show_details()
